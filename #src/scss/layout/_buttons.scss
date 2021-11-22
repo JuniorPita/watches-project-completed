@@ -1,0 +1,27 @@
+// Стили для кнопок
+.button {
+    display: inline-block;
+    background-color: var(--button-color);
+    text-transform: uppercase;
+    color: #FFF;
+    padding: 1.25rem 2rem;
+    font-weight: var(--font-medium);
+    transition: .3s ease-in-out;
+
+    &:hover {
+        background-color: var(--button-color-alt);
+    }
+
+    &-gray {
+        background-color: hsl(var(--hue), var(--sat), 75%);
+        color: var(--title-color);
+
+        &:hover {
+            background-color: hsl(var(--hue), var(--sat), 63%);
+        }
+    }
+
+    &-small {
+        padding: 1rem 1.5rem;
+    }
+}

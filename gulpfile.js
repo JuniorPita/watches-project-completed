@@ -18,7 +18,10 @@ let path = {
         js: sourceFolder + "/js/script.js",
         img: sourceFolder + "/img/**/*.{jpg,gif,ico,webp}",
         fonts: sourceFolder + "/fonts/*.ttf",
-        icons: sourceFolder + "/icons/*.{png,svg}"
+        icons: sourceFolder + "/icons/*.{png,svg}",
+        swiperjs: sourceFolder + "/js/swiper-bundle.min.js",
+        swipercss: sourceFolder + "/css/swiper-bundle.min.css",
+        scrollreveal: sourceFolder + "/js/scrollreveal.min.js"
     },
     watch : {
         html: sourceFolder + "/**/*.html",
@@ -111,6 +114,24 @@ function js() {
         )
         .pipe(dest(path.build.js))
         .pipe(browsersync.stream());
+}
+
+function swiperJS() {
+    return src(path.src.swiperjs)
+        .pipe(fileinclude())
+        .pipe(dest(path.build.js));
+}
+
+function swiperCSS() {
+    return src(path.src.swipercss)
+        .pipe(fileinclude())
+        .pipe(dest(path.build.css));
+}
+
+function scrollReveal() {
+    return src(path.src.scrollreveal)
+        .pipe(fileinclude())
+        .pipe(dest(path.build.js));
 }
 
 function images() {
@@ -212,9 +233,12 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, icons));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, icons, swiperJS, swiperCSS, scrollReveal));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.scrollreveal = scrollReveal;
+exports.swiperjs = swiperJS;
+exports.swipercss = swiperCSS;
 exports.icons = icons;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;

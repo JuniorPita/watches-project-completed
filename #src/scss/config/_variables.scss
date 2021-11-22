@@ -1,0 +1,67 @@
+// Переменные CSS (стили, свойства и значения)
+:root {
+    // Основная высота
+    --header-height: 3.5rem;
+
+    // Цвета
+    // HSL (hue, saturation, lightness)
+    --color: 31; // 31 - Orange, 255 - Purple...
+
+    --hue: 0;
+    --sat: 0%;
+
+    --first-color: hsl(var(--color), 100%, 70%);
+    --button-color: hsl(var(--hue), var(--sat), 17%);
+    --button-color-alt: hsl(var(--hue), var(--sat), 21%);
+    --title-color: hsl(var(--hue), var(--sat), 15%);
+    --text-color: hsl(var(--hue), var(--sat), 35%);
+    --text-color-light: hsl(var(--hue), var(--sat), 55%);
+    --body-color: hsl(var(--hue), var(--sat), 99%);
+    --border-color: hsl(var(--hue), var(--sat), 94%);
+    --container-color: #FFF;
+
+    // Основной шрифт сайта (семейство и начертание)
+    --body-font: 'Roboto', sans-serif;
+
+    // Размеры шрифта
+    // .5rem = 8px, 1rem = 16px...
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-sie: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    // Жирность шрифта
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+
+    // Отступы
+    // .5rem = 8px, 1rem = 16px...
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    // Z-index (иерархия)
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+// Размеры шрифта для девайсов, у которых ширина больше, чем 967px
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 2.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-sie: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}

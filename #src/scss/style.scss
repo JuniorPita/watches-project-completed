@@ -1,0 +1,13 @@
+// Импорт основных стилей
+@import './config/variables';
+@import './base/base';
+@import './layout/layout';
+@import './layout/buttons';
+
+// Импорт стилей для контента (блоков)
+@import './components/header';
+@import './components/home';
+@import './components/featured';
+@import './components/story';
+@import './components/products';
+@import './components/testimonial';
