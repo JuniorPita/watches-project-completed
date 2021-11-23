@@ -1,0 +1,43 @@
+// Стили для смены темы страницы (Dark/Light)
+
+// Изменение заданных ранее переменных под тёмную тему
+body.dark-theme {
+    // Цвета
+    // HSL (hue, saturation, lightness)
+    --color: 31; // 31 - Orange, 255 - Purple...
+
+    --hue: 0;
+    --sat: 0%;
+
+    --first-color: hsl(var(--color), 76%, 74%);
+    --button-color: hsl(var(--hue), var(--sat), 24%);
+    --button-color-alt: hsl(var(--hue), var(--sat), 28%);
+    --title-color: hsl(var(--hue), var(--sat), 95%);
+    --text-color: hsl(var(--hue), var(--sat), 75%);
+    --body-color: hsl(var(--hue), var(--sat), 12%);
+    --border-color: hsl(var(--hue), var(--sat), 20%);
+    --container-color: hsl(var(--hue), var(--sat), 16%);
+}
+
+.change-theme {
+    color: var(--title-color);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.dark-theme .change-theme,
+.dark-theme .nav__toggle,
+.dark-theme .nav__shop,
+.dark-theme .button-gray {
+    color: hsl(0, 0%, 15%);
+}
+
+.dark-theme .scroll-header {
+    box-shadow: 0 1px 4px hsla(0, 0%, 4%, .3);
+}
+
+.scroll-header .change-theme,
+.scroll-header .nav__toggle,
+.scroll-header .nav__shop {
+    color: var(--title-color);
+}

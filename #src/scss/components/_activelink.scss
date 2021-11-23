@@ -1,0 +1,27 @@
+// Стилизация меню (выделение активных блоков при скролле страницы)
+.active-link {
+    position: relative;
+    color: var(--first-color);
+    transition: all .3s ease-in-out;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        animation-name: activelink;
+        animation-duration: 2s;
+    }
+}
+
+@keyframes activelink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

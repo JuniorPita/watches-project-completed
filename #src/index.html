@@ -31,21 +31,30 @@
 </head>
 <body>
     <!-- Импорт HTML блоков -->
+    <!-- Семантика: -->
     <!-- Верхняя часть страницы (header & nav) -->
     <header class="header" id="header">
         @@include('./html/sections/_header.html')
     </header>
     <!-- Основное наполнение страницы (main & aside) -->
     <main class="main" id="main">
+        <aside>
+            @@include('./html/sections/_cart.html')
+        </aside>
         @@include('./html/sections/_home.html')
         @@include('./html/sections/_featured.html')
         @@include('./html/sections/_story.html')
         @@include('./html/sections/_products.html')
         @@include('./html/sections/_testimonial.html')
+        @@include('./html/sections/_new.html')
+        @@include('./html/sections/_newsletter.html')
+        <aside>
+            @@include('./html/sections/_scrollup.html')
+        </aside>
     </main>
     <!-- Нижняя часть страницы (footer) -->
-    <footer class="footer" id="footer">
-
+    <footer class="footer section" id="footer">
+        @@include('./html/sections/_footer.html')
     </footer>
     <!-- Подключение дополнительных скриптов -->
     <script src="js/swiper-bundle.min.js"></script>

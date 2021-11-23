@@ -1,0 +1,35 @@
+// Стили для скролл-бара (ползунок справа)
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: hsl(0, 0%, 74%);
+    
+    &:active {
+        background-color: hsl(0, 0%, 66%);
+    }
+
+    &-thumb {
+        background-color: hsl(0, 0%, 20%);
+        border-radius: 50px;
+
+        &:hover {
+            background-color: hsl(0, 0%, 13%);
+        }
+    }
+}
+
+// Скролл-бар в режиме тёмной темы
+.dark-theme::-webkit-scrollbar {
+    background-color: hsl(0, 0%, 30%);
+
+    &:active {
+        background-color: hsl(0, 0%, 23%);
+    }
+
+    &-thumb {
+        background-color: hsl(0, 0%, 45%);
+
+        &:hover {
+            background-color: hsl(0, 0%, 55%);
+        }
+    }
+}

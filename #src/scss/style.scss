@@ -6,8 +6,19 @@
 
 // Импорт стилей для контента (блоков)
 @import './components/header';
+@import './components/_cart';
 @import './components/home';
 @import './components/featured';
 @import './components/story';
 @import './components/products';
 @import './components/testimonial';
+@import './components/new';
+@import './components/newsletter';
+@import './components/_footer';
+
+// Дополнительные стили и адаптация
+@import './components/_activelink';
+@import './components/_scrollup';
+@import './components/_scrollbar';
+@import './theme/theme';
+@import './media/media';

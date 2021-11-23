@@ -21,16 +21,25 @@
     &__img,
     &__square {
         width: 250px;
+        transition: .4s ease-in-out;
+
+        &:hover {
+            transform: scale(0.9);
+        }
     }
 
     &__square {
         height: 250px;
         background-color: var(--first-color);
+        border-radius: 25px;
     }
 
     &__img {
         position: absolute;
         left: 3rem;
         top: -3rem;
+        border-radius: 25px;
+        border: 7px solid #FFF;
+        z-index: var(--z-tooltip);
     }
 }
